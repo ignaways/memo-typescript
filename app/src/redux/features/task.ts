@@ -1,20 +1,13 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from '@reduxjs/toolkit'
+import { TaskState } from "../../services/interface/TaskState";
 
-export interface TaskStage {
-  data: {
-    title: string,
-    description: string,
-    status: boolean
-  }[]
-}
-
-const initialState: TaskStage = {
+const initialState: TaskState = {
   data: [],
 }
 
 export const taskSlice = createSlice({
-  name: 'memo',
+  name: 'task',
   initialState,
   reducers: {
     isTask: ( state, action: PayloadAction<any[]>) => { 
@@ -25,5 +18,3 @@ export const taskSlice = createSlice({
 
 export const { isTask } = taskSlice.actions
 export default taskSlice.reducer
-
-

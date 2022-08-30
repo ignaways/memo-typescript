@@ -1,0 +1,66 @@
+.card-task__day-mode{
+  box-shadow: 1.5px 1.5px 3px rgb(177, 177, 177);
+  margin: .5em;
+  padding: .5em 1em;
+  border-radius: 10px;
+  cursor:pointer;
+  background-color: white;
+}
+.card-task__day-mode:hover{
+  box-shadow: 1.5px 1.5px 3px rgb(46, 46, 46);
+  color:rgb(31, 31, 31);
+  /* outline: 1px solid rgb(0, 0, 0); */
+}
+
+.card-task__night-mode{
+  box-shadow: 1.5px 1.5px 3px rgb(177, 177, 177);
+  margin: .5em;
+  padding: .5em 1em;
+  border-radius: 10px;
+  cursor:pointer;
+  background-color: black;
+  color: aliceblue;
+}
+.card-task__night-mode:hover{
+  box-shadow: 1.5px 1.5px 3px rgb(0, 0, 0);
+  background-color: rgb(31, 31, 31);
+  color:rgb(255, 255, 255);
+}
+
+.card-add-task{
+  box-shadow: 1.5px 1.5px 3px #ffb218;
+  margin: .5em;
+  padding: .5em 1em;
+  border-radius: 10px;
+  cursor:pointer;
+  background-color: #EC9704;
+  color: rgb(5, 5, 5);
+  display: flex;
+  justify-content: center;
+}
+.card-add-task:hover{
+  background-color: #fcac00;
+}
+.card-add-task:active{
+  background-color: #EC9704;
+}
+
+.testAnimate {
+  display: flex;
+  justify-content: center;
+}
+
+.testAnimate:hover {
+  animation: mymove 5s infinite;
+}
+
+@keyframes mymove {
+  0%, 20%, 50%, 80%, 100% {-webkit-transform: translateY(0);} 
+  10% {-webkit-transform: translateY(-10px);} 
+  50% {-webkit-transform: translateY(-5px);} 
+}
+
+/* 
+@keyframes rotate {
+  50% {transform: rotate(180deg);}
+} */

@@ -1,0 +1,19 @@
+.container{
+  margin: auto;
+  width: 50%;
+}
+
+.row__card:after{
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column__card-mutiple{
+  float: left;
+  width: 50%;
+}
+
+.container__card-single{
+  width: 100%;
+}
