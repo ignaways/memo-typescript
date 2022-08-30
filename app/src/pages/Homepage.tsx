@@ -7,7 +7,6 @@ import '../assets/styles/App.css'
 const Homepage = () => {
   const maptest = [1, 2,1, 2];
   const typeCard = useSelector((state: RootState) => state.mode.cardType);
-  console.log(typeCard);
   
   return (
     <>

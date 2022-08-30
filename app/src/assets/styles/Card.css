@@ -11,7 +11,6 @@
   color:rgb(31, 31, 31);
   /* outline: 1px solid rgb(0, 0, 0); */
 }
-
 .card-task__night-mode{
   box-shadow: 1.5px 1.5px 3px rgb(177, 177, 177);
   margin: .5em;
@@ -26,6 +25,24 @@
   background-color: rgb(31, 31, 31);
   color:rgb(255, 255, 255);
 }
+
+.card-popup {
+  background-color: rgb(255, 255, 255);
+  box-shadow: 1.5px 1.5px 3px rgb(177, 177, 177);
+  padding: .5em 1em;
+  border-radius: 10px;
+  height: 10em;
+  width: 50%;
+}
+
+
+
+
+
+
+
+
+
 
 .card-add-task{
   box-shadow: 1.5px 1.5px 3px #ffb218;
@@ -59,6 +76,8 @@
   10% {-webkit-transform: translateY(-10px);} 
   50% {-webkit-transform: translateY(-5px);} 
 }
+
+
 
 /* 
 @keyframes rotate {
