@@ -5,7 +5,7 @@ import { isCardType, isColorMode } from "./redux/features/mode";
 import type { RootState } from "./redux/store";
 
 import Homepage from "./pages/Homepage";
-import FormAddTask from "./pages/FormAddTask";
+import PopupPage from "./pages/PopupPage";
 
 function App() {
   const dispatch = useDispatch();
@@ -21,7 +21,7 @@ function App() {
       <div className="container">
         <ButtonTaskCard />
         <Homepage />
-        {!isPopup && <FormAddTask />}
+        {!isPopup && <PopupPage />}
       </div>
     </div>
   );

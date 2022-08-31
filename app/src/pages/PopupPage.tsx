@@ -2,7 +2,7 @@ import PopupCard from "../components/card/PopupCard";
 import "../assets/styles/Modal.css";
 import { useDispatch } from "react-redux";
 import { isClosePopup } from "../redux/features/globalState";
-const FormAddTask = () => {
+const PopupPage = () => {
   const dispatch = useDispatch();
   const clickHandler = (e: any) => {
     if (e.target.className === "modal") {
@@ -19,4 +19,4 @@ const FormAddTask = () => {
   );
 };
 
-export default FormAddTask;
+export default PopupPage;

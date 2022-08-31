@@ -1,17 +1,21 @@
-import * as Icon from "react-bootstrap-icons";
-import "../../assets/styles/Button.css";
-import { useDispatch } from "react-redux";
-import { isClosePopup } from "../../redux/features/globalState";
+import ButtonClosePopup from "../button/ButtonClosePopup";
+import AddTaskForm from "../content/AddTaskForm";
+import DetailTask from "../content/DetailTask";
+import { useSelector } from "react-redux";
+import { RootState } from "../../redux/store";
+
 const PopupCard = () => {
-  const dispatch = useDispatch();
-  const clickHandler = (e: any) => {
-    dispatch(isClosePopup(true));
-  };
+  const popupView = useSelector(
+    (state: RootState) => state.globalState.popupView
+  );
   return (
     <>
       <div className="card-popup">
-        masuk pop up
-        <Icon.XSquareFill className="button-close" onClick={clickHandler} />
+        <div>
+          <div>Title To Do</div>
+          <ButtonClosePopup />
+        </div>
+        {popupView === "addTask" ? <AddTaskForm /> : <DetailTask />}
       </div>
     </>
   );

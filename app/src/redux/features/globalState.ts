@@ -4,7 +4,7 @@ import {GlobalState} from "../../services/interface/GlobalState"
 
 const initialState: GlobalState = {
     closePopup: true,
-    // addForm: false,
+    popupView: '',
 }
 
 const gobalSlice = createSlice({
@@ -13,12 +13,12 @@ const gobalSlice = createSlice({
     reducers:{
         isClosePopup: (state, action: PayloadAction<boolean>) => {
             state.closePopup = action.payload
+        },
+        isPopupView: (state, action: PayloadAction<string>) => {
+            state.popupView = action.payload
         }
-        // isAddForm: (state, action: PayloadAction<boolean>) => {
-        //     state.addForm = action.payload
-        // }
     }
 })
 
-export const { isClosePopup } = gobalSlice.actions
+export const { isClosePopup, isPopupView } = gobalSlice.actions
 export default gobalSlice.reducer
