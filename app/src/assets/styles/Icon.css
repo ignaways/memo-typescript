@@ -1,0 +1,8 @@
+.icon-color-palette {
+  font-size: 16px;
+  margin: 6px;
+}
+.icon-color-palette:hover {
+  font-size: 22px;
+  margin: 3px;
+}
