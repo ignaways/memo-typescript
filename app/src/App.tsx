@@ -6,6 +6,7 @@ import type { RootState } from "./redux/store";
 
 import Homepage from "./pages/Homepage";
 import PopupPage from "./pages/PopupPage";
+import MenuBar from "./components/menuBar/MenuBar";
 
 function App() {
   const dispatch = useDispatch();
@@ -20,6 +21,7 @@ function App() {
       </div>
       <div className="container">
         <ButtonTaskCard />
+        <MenuBar />
         <Homepage />
         {!isPopup && <PopupPage />}
       </div>

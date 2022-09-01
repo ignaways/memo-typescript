@@ -20,8 +20,7 @@ const MutipleCard = () => {
       }`}
       onClick={clickButtonHandler}
     >
-        <Icon.GridFill />
-        <Icon.HddStackFill/>
+        
       <div>Title</div>
       <div>Description</div>
       

@@ -15,5 +15,6 @@
 }
 
 .container__card-single{
+  float: left;
   width: 100%;
 }
