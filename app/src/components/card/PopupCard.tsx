@@ -1,6 +1,6 @@
 import ButtonClosePopup from "../button/ButtonClosePopup";
-import AddTaskForm from "../content/AddTaskForm";
-import DetailTask from "../content/DetailTask";
+import AddTaskForm from "../mapping/AddTaskForm";
+import DetailTask from "../mapping/DetailTask";
 import { useSelector } from "react-redux";
 import { RootState } from "../../redux/store";
 

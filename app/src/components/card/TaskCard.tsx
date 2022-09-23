@@ -4,15 +4,15 @@ import type { RootState } from "../../redux/store";
 import { isClosePopup, isPopupView } from "../../redux/features/globalState";
 import { themeColor } from "../../services/constants/colorTheme";
 import ButtonIconColorTheme from "../button/ButtonIconColorTheme";
+import ButtonIconStatus from "../button/ButtonIconStatus";
 
 import * as Icon from "react-bootstrap-icons";
 
 const MutipleCard = () => {
   const colorTheme = useSelector((state: RootState) => state.mode.colorTheme);
-  console.log(colorTheme)
-  const mainColor = themeColor.color[0].mainColor
-  const subColor = themeColor.color[0].subColor
-  
+  const mainColor = themeColor.color[0].mainColor;
+  const subColor = themeColor.color[0].subColor;
+
   const dispatch = useDispatch();
   const clickButtonHandler = () => {
     dispatch(isClosePopup(false));
@@ -29,10 +29,7 @@ const MutipleCard = () => {
       <div>Title</div>
       <div>Description</div>
 
-      <Icon.ClipboardCheckFill />
-      <Icon.ExclamationDiamondFill />
-      <Icon.HourglassSplit />
-
+      <ButtonIconStatus />
       <ButtonIconColorTheme />
     </div>
   );

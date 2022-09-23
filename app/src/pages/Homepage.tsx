@@ -18,7 +18,7 @@ const Homepage = () => {
                   typeCard ? "column__card-mutiple" : "container__card-single"
                 }`}
               >
-                <TaskCard />
+                <TaskCard  />
               </div>
             );
           })}
