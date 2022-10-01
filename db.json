@@ -1,0 +1,20 @@
+{
+  "data":[
+    {
+      "title":"Bersih - bersih",
+      "description":"jangan lupa membersihkan rumah",
+      "time":"08:00",
+      "date":"17 agustust 2022",
+      "status":true,
+      "color":"orange"
+    },
+    {
+      "title":"Belajar",
+      "description":"belajar matematika",
+      "time":"08:00",
+      "date":"17 agustust 2022",
+      "status":true,
+      "color":"purle"
+    }
+  ]
+}

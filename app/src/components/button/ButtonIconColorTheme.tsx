@@ -4,7 +4,7 @@ import * as Icon from "react-bootstrap-icons";
 import { themeColor } from "../../services/constants/colorTheme";
 import { useDispatch } from "react-redux";
 import {isColorTheme} from "../../redux/features/mode"
-import {dummyMemo} from "../../services/constants/dataDummy"
+// import {dummyMemo} from "../../services/constants/dataDummy"
 
 const ButtonIconColorTheme = () => {
   const dispatch = useDispatch();

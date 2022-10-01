@@ -4,6 +4,8 @@ import { TaskState } from "../../services/interface/TaskState";
 
 const initialState: TaskState = {
   data: [],
+  isLoading: false,
+  isError: false
 }
 
 export const taskSlice = createSlice({
