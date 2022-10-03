@@ -28,7 +28,6 @@ const MutipleCard = () => {
     >
       <div>Title</div>
       <div>Description</div>
-
       <ButtonIconStatus />
       <ButtonIconColorTheme />
     </div>

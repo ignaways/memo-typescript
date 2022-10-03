@@ -10,7 +10,8 @@ import "../assets/styles/App.css";
 const Homepage = () => {
   const dispatch = useDispatch();
   const { data, isLoading, isError } = useFetch("https://my-json-server.typicode.com/ignaways/memo-typescript/db");
-  dispatch(isTask(data));
+  
+  dispatch(isTask(data))
   
   const typeCard = useSelector((state: RootState) => state.mode.cardType);
   return (

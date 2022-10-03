@@ -19,7 +19,7 @@ function App() {
         <button onClick={() => dispatch(isColorMode(false))}>night</button>
         <button onClick={() => dispatch(isColorMode(true))}>day</button>
       </div>
-      <div className="container">
+      <div className="container__main">
         <ButtonTaskCard />
         <MenuBar />
         <Homepage />
