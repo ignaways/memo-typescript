@@ -9,28 +9,19 @@ import "../assets/styles/App.css";
 // import { dummyMemo } from "../services/constants/dataDummy";
 const Homepage = () => {
   const dispatch = useDispatch();
-  const { data, isLoading, isError } = useFetch("https://my-json-server.typicode.com/ignaways/memo-typescript/db");
+  const { data, isLoading, isError } : any = useFetch("https://my-json-server.typicode.com/ignaways/memo-typescript/db");
   
-  dispatch(isTask(data))
+  useEffect(() => {
+    dispatch(isTask(data))
+  }, [data])
   
-  const typeCard = useSelector((state: RootState) => state.mode.cardType);
+  // const typeCard = useSelector((state: RootState) => state.mode.cardType);
   return (
     <>
       <div>
         <div className="row__card">
           <TaskList />
 
-          {/* {dummyMemo.data.map((e, i) => {
-            return (
-              <div
-                className={`${
-                  typeCard ? "column__card-mutiple" : "container__card-single"
-                }`}
-              >
-                <TaskCard  />
-              </div>
-            );
-          })} */}
         </div>
       </div>
     </>

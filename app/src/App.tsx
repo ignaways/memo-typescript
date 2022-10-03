@@ -23,7 +23,6 @@ function App() {
         <ButtonTaskCard />
         <MenuBar />
         <Homepage />
-        {!isPopup && <PopupPage />}
       </div>
     </div>
   );
