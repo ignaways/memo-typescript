@@ -14,9 +14,15 @@ export const taskSlice = createSlice({
   reducers: {
     isTask: ( state, action: PayloadAction<any[]>) => { 
       state.data = action.payload
+    },
+    isLoading: ( state, action: PayloadAction<boolean>) => { 
+      state.isLoading = action.payload
+    },
+    isError: ( state, action: PayloadAction<boolean>) => { 
+      state.isError = action.payload
     }
   }
 })
 
-export const { isTask } = taskSlice.actions
+export const { isTask, isLoading, isError } = taskSlice.actions
 export default taskSlice.reducer
