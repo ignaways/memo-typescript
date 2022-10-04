@@ -7,6 +7,7 @@ import { isClosePopup, isPopupView } from "../../redux/features/globalState";
 import { themeColor } from "../../services/constants/colorTheme";
 import ButtonIconColorTheme from "../button/ButtonIconColorTheme";
 import ButtonIconStatus from "../button/ButtonIconStatus";
+import ButtonEditTask from "../button/ButtonEditTask"
 import { Data } from "../../services/interface/TaskState";
 import * as Icon from "react-bootstrap-icons";
 
@@ -20,10 +21,13 @@ const TaskCard: React.FC<Data> = ({title, description, time, date, status, color
 
   return (
     <div className={`card-task ${color ?? "orange"}`} >
-      <div>Title</div>
-      <div>Description</div>
-      <ButtonIconStatus />
-      <ButtonIconColorTheme />
+      <div style={{"display":"flex", "justifyContent":"space-between"}}>
+        <div style={{"fontSize":"1.2em", "fontWeight":"bold"}}>{title}</div>
+        <ButtonEditTask />
+      </div>
+      <div style={{"fontSize":".9em"}}>{description}</div>
+      <ButtonIconStatus status={status}/>
+      <ButtonIconColorTheme color={color}/>
     </div>
   );
 };
