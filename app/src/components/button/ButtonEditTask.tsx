@@ -4,7 +4,7 @@ const ButtonEditTask = () => {
   return(
     <div style={{"display":"flex", "alignItems":"center"}}>
        <Icon.PencilSquare size={18}/>
-       <div style={{"fontSize":".8em","fontWeight":"500"}}>edit</div>
+       <div style={{"fontSize":".8em","fontWeight":"500",marginLeft:".3em"}}>edit</div>
     </div>
   )
 }

@@ -34,3 +34,40 @@
   color: #1D1D1D;
   background-color: #DEDEDE;
 }
+
+.orange_revese {
+  background-color: #B86800;
+  color: #FFA200;
+}
+.blue_revese {
+  background-color: #007DA4;
+  color: #87DAFF;
+}
+.purle_revese {
+  background-color: #9800A2;
+  color: #E07CFE;
+}
+.green_revese {
+  background-color: #005B09;
+  color: #00C280;
+}
+.red_revese {
+  background-color: #FFC400;
+  color: #AB0000;
+}
+.grey_revese {
+  background-color: #5A5A5A;
+  color: #A8A8A8;
+}
+.pink_revese {
+  background-color: #007DA4;
+  color: #FFA5A5;
+}
+.white_revese {
+  background-color: #FFFFFF;
+  color: #000000;
+}
+.black_revese {
+  background-color: #1D1D1D;
+  color: #DEDEDE;
+}

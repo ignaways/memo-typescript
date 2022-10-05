@@ -14,10 +14,10 @@ const ButtonIconColorTheme = ({ color }: { color: string }) => {
   };
   return (
     <>
-      <div className="dropdown">
+      <div className="dropdown" style={{"marginLeft":".7em"}}>
         <div style={{ display: "flex" }}>
-          <Icon.PaletteFill />
-          <div style={{ fontSize: ".7em", marginLeft: ".5em" }}>{color}</div>
+          <Icon.PaletteFill size={18} />
+          <div style={{ fontSize: ".8em", marginLeft: ".5em" }}>{color}</div>
         </div>
         <div
           className="dropdown-content"

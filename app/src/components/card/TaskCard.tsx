@@ -7,12 +7,19 @@ import { isClosePopup, isPopupView } from "../../redux/features/globalState";
 import { themeColor } from "../../services/constants/colorTheme";
 import ButtonIconColorTheme from "../button/ButtonIconColorTheme";
 import ButtonIconStatus from "../button/ButtonIconStatus";
-import ButtonEditTask from "../button/ButtonEditTask"
+import ButtonEditTask from "../button/ButtonEditTask";
+import DateCard from "./DateCard";
 import { Data } from "../../services/interface/TaskState";
 import * as Icon from "react-bootstrap-icons";
 
-
-const TaskCard: React.FC<Data> = ({title, description, time, date, status, color}) => {
+const TaskCard: React.FC<Data> = ({
+  title,
+  description,
+  time,
+  date,
+  status,
+  color,
+}) => {
   const dispatch = useDispatch();
   const clickButtonHandler = () => {
     dispatch(isClosePopup(false));
@@ -20,14 +27,31 @@ const TaskCard: React.FC<Data> = ({title, description, time, date, status, color
   };
 
   return (
-    <div className={`card-task ${color ?? "orange"}`} >
-      <div style={{"display":"flex", "justifyContent":"space-between"}}>
-        <div style={{"fontSize":"1.2em", "fontWeight":"bold"}}>{title}</div>
+    <div className={`card-task ${color ?? "orange"}`}>
+      <div style={{ display: "flex", justifyContent: "space-between" }}>
+        <div style={{ fontSize: "1.3em", fontWeight: "bold" }}>{title}</div>
         <ButtonEditTask />
       </div>
-      <div style={{"fontSize":".9em"}}>{description}</div>
-      <ButtonIconStatus status={status}/>
-      <ButtonIconColorTheme color={color}/>
+      <div style={{ fontSize: "1em", height: "13.5vh" }}>{description}</div>
+      <div
+        style={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "flex-end",
+        }}
+      >
+        <div style={{ display: "flex" }}>
+          <ButtonIconStatus status={status} />
+          <ButtonIconColorTheme color={color} />
+        </div>
+        <div>
+          <DateCard 
+            color={color} 
+            time={time} 
+            date={date}
+          />
+        </div>
+      </div>
     </div>
   );
 };
