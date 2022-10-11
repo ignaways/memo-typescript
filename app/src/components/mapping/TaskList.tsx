@@ -4,15 +4,15 @@ import { useSelector } from "react-redux";
 import TaskCard from "../card/TaskCard";
 import { Data } from "../../services/interface/TaskState";
 
-const TaskList: React.FC = () => {
+const TaskList = () => {
   const datas: any = useSelector((state: RootState) => state.task.data);
   const typeCard = useSelector((state: RootState) => state.mode.cardType);
   return (
     <>
       <div>
-        {datas?.data?.map((e: Data, i: number) => {
+        {datas?.map((e: Data, i: number) => {
           const obj = {
-            id:e.id,
+            id: e._id,
             title: e.title,
             description: e.description,
             time: e.time,
@@ -21,7 +21,12 @@ const TaskList: React.FC = () => {
             color: e.color,
           };
           return (
-            <div key={i} className={`${typeCard ? "column__card-mutiple" : "container__card-single"}`}>
+            <div
+              key={i}
+              className={`${
+                typeCard ? "column__card-mutiple" : "container__card-single"
+              }`}
+            >
               <TaskCard {...obj} />
             </div>
           );

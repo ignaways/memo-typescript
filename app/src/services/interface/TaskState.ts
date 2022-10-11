@@ -1,6 +1,6 @@
 export interface TaskState {
   data: {
-    id: string;
+    id: number;
     title: string;
     description: string;
     time: string;
@@ -13,7 +13,7 @@ export interface TaskState {
 }
 
 export interface Data {
-  id: string;
+  _id: number;
   title: string;
   description: string;
   time: string;

@@ -1,13 +1,12 @@
 import * as Icon from "react-bootstrap-icons";
 import axios from "axios";
 
-const ButtonIconStatus = ({ status }: { status: boolean }) => {
-  const statusApi = async () => {
-    const response = await axios.put(`https://my-json-server.typicode.com/ignaways/memo-typescript/db`, {})
-  }
-  const updateStatushandler = () => {
+interface props {
+  id: string,
+  status: boolean,
+}
 
-  }
+const ButtonIconStatus = ({ status, id }: props) => {
 
   return (
     <div style={{ display: "flex" }}>
@@ -15,7 +14,7 @@ const ButtonIconStatus = ({ status }: { status: boolean }) => {
       <Icon.ExclamationDiamondFill /> */}
       {status ? (
         <>
-          <Icon.HourglassSplit size={18} onClick={() => statusApi()} />
+          <Icon.HourglassSplit size={18} />
           <div style={{ fontSize: ".8em", marginLeft: ".3em" }}>Progress</div>
         </>
       ) : (

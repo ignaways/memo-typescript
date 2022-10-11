@@ -13,6 +13,7 @@ import { Data } from "../../services/interface/TaskState";
 import * as Icon from "react-bootstrap-icons";
 
 const TaskCard: React.FC<Data> = ({
+  _id,
   title,
   description,
   time,
@@ -41,15 +42,11 @@ const TaskCard: React.FC<Data> = ({
         }}
       >
         <div style={{ display: "flex" }}>
-          <ButtonIconStatus status={status} />
-          <ButtonIconColorTheme color={color} />
+          <ButtonIconStatus status={status} id={_id} />
+          <ButtonIconColorTheme color={color} id={_id}/>
         </div>
         <div>
-          <DateCard 
-            color={color} 
-            time={time} 
-            date={date}
-          />
+          <DateCard color={color} time={time} date={date} />
         </div>
       </div>
     </div>

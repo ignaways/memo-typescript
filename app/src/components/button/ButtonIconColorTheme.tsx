@@ -1,16 +1,20 @@
 import "../../assets/styles/App.css";
 import "../../assets/styles/Icon.css";
 import * as Icon from "react-bootstrap-icons";
-import { themeColor } from "../../services/constants/colorTheme";
+import { themeColor, Color } from "../../services/constants/colorTheme";
 import { useDispatch } from "react-redux";
 import { isColorTheme } from "../../redux/features/mode";
+import { BASE_URL } from "../../services/constants/path";
+import axios from "axios";
+import useFetch from "../../hooks/useFecth";
 // import {dummyMemo} from "../../services/constants/dataDummy"
 
-const ButtonIconColorTheme = ({ color }: { color: string }) => {
+const ButtonIconColorTheme = ({ color, id }: { color: string, id: string}) => {
   const dispatch = useDispatch();
 
-  const colorHandlerChange = (code: number) => {
-    dispatch(isColorTheme(code + 1));
+  const colorHandlerChange = (color: string) => {
+    // const response = await axios.patch(`${BASE_URL}/task/:id`)
+    console.log(color);
   };
   return (
     <>
@@ -30,7 +34,7 @@ const ButtonIconColorTheme = ({ color }: { color: string }) => {
                   key={i}
                   color={e.mainColor}
                   className="icon-color-palette"
-                  onClick={() => (i)}
+                  onClick={() => colorHandlerChange(e.color)}
                 />
               );
             })}
