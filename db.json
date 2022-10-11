@@ -1,7 +1,7 @@
 {
   "data":[
     {
-      "id":1,
+      "_id":"1",
       "title":"Bersih - bersih",
       "description":"jangan lupa membersihkan rumah",
       "time":"08:00",
@@ -10,7 +10,7 @@
       "color":"orange"
     },
     {
-      "id":2,
+      "_id":"2",
       "title":"Belajar",
       "description":"belajar matematika",
       "time":"08:00",
