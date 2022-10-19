@@ -8,6 +8,7 @@ const PopupCard = () => {
   const popupView = useSelector(
     (state: RootState) => state.globalState.popupView
   );
+  console.log("🚀 ~ file: PopupCard.tsx ~ line 11 ~ PopupCard ~ popupView", popupView)
   return (
     <>
       <div className="card-popup">
@@ -15,7 +16,7 @@ const PopupCard = () => {
           <div>Title To Do</div>
           <ButtonClosePopup />
         </div>
-        {popupView === "addTask" ? <AddTaskForm /> : <DetailTask />}
+        {/* {popupView === "addTask" ? <AddTaskForm /> : <DetailTask />} */}
       </div>
     </>
   );

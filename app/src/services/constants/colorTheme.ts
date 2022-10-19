@@ -22,7 +22,7 @@ export const themeColor: ThemeState = {
     { mainColor: "#AB0000", subColor: "#FFC400", color:"red" },
     { mainColor: "#A8A8A8", subColor: "#5A5A5A", color:"grey" },
     { mainColor: "#FFA5A5", subColor: "#007DA4", color:"pink" },
-    { mainColor: "#FFFFFF", subColor: "#000000", color:"white" },
-    { mainColor: "#1D1D1D", subColor: "#DEDEDE", color:"black" }
+    { mainColor: "#FFFFFF", subColor: "#000000", color:"black" },
+    { mainColor: "#1D1D1D", subColor: "#DEDEDE", color:"white" }
   ]
 }

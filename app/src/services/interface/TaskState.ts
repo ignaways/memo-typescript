@@ -13,7 +13,7 @@ export interface TaskState {
 }
 
 export interface Data {
-  _id: number;
+  _id: string;
   title: string;
   description: string;
   time: string;

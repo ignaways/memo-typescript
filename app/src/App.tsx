@@ -11,15 +11,18 @@ import MenuBar from "./components/menuBar/MenuBar";
 function App() {
   const dispatch = useDispatch();
   const isPopup = useSelector((state: RootState) => state.globalState.closePopup);
+  // console.log("🚀 ~ file: App.tsx ~ line 14 ~ App ~ isPopup", isPopup)
   return (
     <div>
       <div>
         <button onClick={() => dispatch(isCardType(false))}>single</button>
-        <button onClick={() => dispatch(isCardType(true))}>mutiple</button>
+        <button onClick={() => dispatch(isCardType(true))}>multiple</button>
         <button onClick={() => dispatch(isColorMode(false))}>night</button>
         <button onClick={() => dispatch(isColorMode(true))}>day</button>
       </div>
       <div className="container__main">
+        {!isPopup && <PopupPage />}
+        {/* <PopupPage /> */}
         <ButtonTaskCard />
         <MenuBar />
         <Homepage />

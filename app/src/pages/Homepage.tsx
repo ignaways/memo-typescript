@@ -10,8 +10,8 @@ import "../assets/styles/App.css";
 // import { dummyMemo } from "../services/constants/dataDummy";
 const Homepage = () => {
   const dispatch = useDispatch();
-  const { data, isLoading, isError } : any = useFetch("https://my-json-server.typicode.com/ignaways/memo-typescript/data");
-  // const { data, isLoading, isError } : any = useFetch(`${BASE_URL}/task`);
+  // const { data, isLoading, isError } : any = useFetch("https://my-json-server.typicode.com/ignaways/memo-typescript/data");
+  const { data, isLoading, isError } : any = useFetch(`${BASE_URL}/task`);
   
   useEffect(() => {
     dispatch(isTask(data))
@@ -23,7 +23,6 @@ const Homepage = () => {
       <div>
         <div className="row__card">
           <TaskList />
-
         </div>
       </div>
     </>

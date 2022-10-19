@@ -43,7 +43,7 @@ const TaskCard: React.FC<Data> = ({
       >
         <div style={{ display: "flex" }}>
           <ButtonIconStatus status={status} id={_id} />
-          <ButtonIconColorTheme color={color} id={_id}/>
+          <ButtonIconColorTheme color={color} id={_id} />
         </div>
         <div>
           <DateCard color={color} time={time} date={date} />
